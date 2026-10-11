@@ -1,0 +1,100 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover your next favourite movie with ScreenSnack.">
+  <title>ScreenSnack — Find Your Next Movie</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="ScreenSnack home">
+      <span class="logo-icon">▶</span> ScreenSnack
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#discover">Discover</a>
+      <a href="#favorites">My Favorites</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR NEXT MOVIE NIGHT STARTS HERE</p>
+      <h1>Too many movies.<br><span>Not enough time.</span></h1>
+      <p class="hero-description">
+        Find your next favourite film without endless scrolling.
+      </p>
+      <a class="primary-button" href="#discover">Explore movies ↓</a>
+    </section>
+
+    <section class="movie-section" id="discover">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>Discover movies</h2>
+        </div>
+        <button id="random-button" class="random-button" type="button">
+          🎲 Pick for me
+        </button>
+      </div>
+
+      <div class="controls">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search"
+            placeholder="Search movies..." aria-label="Search movies by title">
+        </label>
+
+        <label class="genre-control">
+          <span class="sr-only">Filter by genre</span>
+          <select id="genre-filter">
+            <option value="all">All genres</option>
+          </select>
+        </label>
+
+        <button id="favorites-toggle" class="secondary-button" type="button"
+          aria-pressed="false">
+          ♡ Favorites
+        </button>
+      </div>
+
+      <p id="results-count" class="results-count" aria-live="polite"></p>
+      <div id="movie-grid" class="movie-grid"></div>
+
+      <div id="empty-state" class="empty-state" hidden>
+        <span class="empty-icon">🎬</span>
+        <h3>No movies found</h3>
+        <p>Try another title or choose a different genre.</p>
+        <button id="clear-filters" class="secondary-button" type="button">
+          Clear filters
+        </button>
+      </div>
+    </section>
+
+    <section id="favorites" class="favorites-note">
+      <span>♥</span>
+      <p>Your favorites are saved in this browser, even when you refresh.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="#">▶ ScreenSnack</a>
+    <p>A small, curated demo catalogue made for movie lovers.</p>
+    <p>Made for your next movie night. 🍿</p>
+  </footer>
+
+  <dialog id="movie-dialog" class="movie-dialog">
+    <button id="close-dialog" class="close-dialog" type="button"
+      aria-label="Close movie suggestion">✕</button>
+    <p class="eyebrow">TONIGHT'S PICK</p>
+    <div id="random-result"></div>
+    <button id="another-pick" class="primary-button" type="button">
+      Pick another
+    </button>
+  </dialog>
+</body>
+</html>
+```
