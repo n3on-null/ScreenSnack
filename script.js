@@ -1,4 +1,3 @@
-```javascript
 // ScreenSnack — movie discovery website
 
 const movies = [
@@ -399,4 +398,3 @@ clearFiltersButton.addEventListener("click", () => {
 // Start the website.
 populateGenres();
 renderMovies();
-```
